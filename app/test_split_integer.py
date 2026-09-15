@@ -28,3 +28,11 @@ def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
     result = split_integer(value, number_of_parts)
     assert result[0] == 0
     assert len(result) == number_of_parts
+
+
+def test_should_return_zeros_when_value_is_zero() -> None:
+    assert split_integer(0, 3) == [0, 0, 0]
+
+
+def test_should_split_into_equal_parts_when_value_equals_number_of_parts() -> None:
+    assert split_integer(5, 5) == [1, 1, 1, 1, 1]
